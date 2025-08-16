@@ -1,0 +1,14 @@
+{
+    "AuthAdminUserPoolDomain": "rpm-dev-admin",
+    "AuthNurseUserPoolDomain": "rpm-dev-nurse",
+    "AuthPatientUserPoolDomain": "rpm-dev-patient",
+    "OauthCallbackURL": "https://client.devrms.stopcovid19.jp/",
+    "OauthSignoutURL": "https://client.devrms.stopcovid19.jp/",
+    "Bucket": "testbucket45678876",
+    "DebugMode": "on",
+    "DBPrefix": "DEVRPM-",
+    "SMS_ENDPOINT": "",
+    "SMS_SECURITYKEY": "",
+    "SMS_ACCESSKEY": "",
+    "LOGINURL": "http://localhost:8080/#/login/"
+  }

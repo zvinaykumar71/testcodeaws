@@ -41,7 +41,9 @@ PASSWORD=`cat .secret.json | jq -r '.auth_pass'`
 POOL_ID=`cat config.json | jq -r "map(select(.apiGateway.stageName == \"${STAGE}\")) | .[].cognito.adminUserPoolId"`
 CLIENT_ID=`cat config.json | jq -r "map(select(.apiGateway.stageName == \"${STAGE}\")) | .[].cognito.adminUserPoolWebClientId"`
 
-echo "#--- create admin user "
+
+echo "#--- create admin user  POOL_ID: $POOL_ID"
+echo "#--- create admin user CLIENT_ID: $CLIENT_ID"
 
 RET=`aws cognito-idp admin-create-user \
 --user-pool-id $POOL_ID \

@@ -1,67 +1,62 @@
-# 遠隔患者モニタリングシステム
+# Remote Patient Monitoring System
 
-## これは何？
+## what is this?
 
-自宅療養や宿泊療養中の患者にスマートフォン上で必要項目を入力してもらい、患者の健康状態の把握を保健所で行いやすくするためのシステムです。
+This system allows patients undergoing home or accommodation treatment to enter the necessary fields on their smartphones, making it easier for the public health center to understand the patient's health status.
 
-背景情報については、[BACKGROUND.md](docs/BACKGROUND.md)もご覧ください。
+For background information,[BACKGROUND.md](docs/BACKGROUND.md)Please also take a look.
 
-## 手伝ってくださる方へ
+## For those who help
 
-本システムは現状無報酬での開発となっており、コントリビューターを募集しております。
+This system is currently being developed without compensation, and we are looking for contributors.
 
-Issues に手伝って欲しいタスクを記載していますのでご確認ください。
-お手伝いいただける方は、必ず[CONTRIBUTING.md](docs/CONTRIBUTING.md)をご一読いただけますようよろしくおねがいします。
+Please check the Issues list the tasks you would like to help.
+If you are able to help, please be sure to read [CONTRIBUTING.md] (docs/CONTRIBUTING.md).
 
-また、ボランティアベースで本番環境の運用を行うことは難しいため、ある程度まで開発が進んだ段階からは、運営能力のある法人が自治体等からの委託事業としてシステムの保守/運用を行う事を想定していますのでご了承ください。
-
+Furthermore, since it is difficult to operate a production environment on a volunteer basis, please note that from the stage where development progresses to a certain extent, a corporation with operational capabilities will be able to maintain/operate the system as a contracted project from local governments, etc.
 ## Swagger UI
+You can run the staging API from [Swagger UI](https://codeforjapan.github.io/remote-patient-monitoring-api/).
 
-[Swagger UI](https://codeforjapan.github.io/remote-patient-monitoring-api/) からステージング用のAPIを実行することができます。
-
-まず、`/api/admin/login` から、指示された User/Password を使ってログインを行ってください。
-成功すると、`idToken` が返却されます。
+First, log in using the User/Password indicated by `/api/admin/login`.
+If successful, `idToken` is returned.
 
 ![api login](docs/images/loginapi.png)
 
-ここで返却された `idToken` の値を、`Authorize` ボタンを押した先にあるWindowの `APIGatewayAdminAuthorizer  (apiKey)` にセットすることで、APIをテストすることができます。
+You can test the API by setting the value of `idToken` returned here to the `APIGatewayAdminAuthorizer (apiKey)` of the window that appears at the end of the `Authorize` button.
+Similarly, if you use `idToken`, which will return if you use `Nurse`, created with `/api/admin/centers/{centerId}/nurses/` or `Patient`, created with `/api/admin/centers/{centerId}/patients/`, you can paste a login session with another Authorizer.
 
-同様に、`/api/admin/centers/{centerId}/nurses/` などで作成した `Nurse` や　`/api/admin/centers/{centerId}/patients/` で作成した `Patient` で Login 系のメソッドを叩くと帰ってくる `idToken` を使えば、別の Authorizer でログインセッションを貼ることができます。
+## About the development environment
 
-## 開発環境について
+Please check [DEVELOPMENT.md] (docs/DEVELOPMENT.md).
 
-[DEVELOPMENT.md](docs/DEVELOPMENT.md)をご確認ください。
+## System Overview
 
-## システム概要
+![System Overview] (docs/images/system-overview.png)
 
-![システム概要図](docs/images/system-overview.png)
+*This system covers areas enclosed in red.
 
-※本システムは赤字で囲んだ部分が対象
+For more information, see [System Specifications] (docs/SPECIFICATION.md).
 
-詳細については、[システム仕様](docs/SPECIFICATION.md)をご覧ください。
-
-本リポジトリは、全体的なIssue管理及び、API サーバの開発のためのリポジトリとなります。
-
-保健師用ダッシュボード については、[remote-patient-monitoring-dashboard](https://github.com/codeforjapan/remote-patient-monitoring-dashboard)を、
-患者用クライアント については、[remote-patient-monitoring-client](https://github.com/codeforjapan/remote-patient-monitoring-client)をご覧ください。
+This repository is for overall issue management and API server development.
+For the dashboard for public health nurses, click [remote-patient-monitoring-dashboard](https://github.com/codeforjapan/remote-patient-monitoring-dashboard)
+For information on patient clients, see [remote-patient-monitoring-client](https://github.com/codeforjapan/remote-patient-monitoring-client).
 
 
-## これまでの歩み
+## Past progress
 
-| 日付       | 内容                                                                                   |
-| ---------- | -------------------------------------------------------------------------------------- |
-| 2021/04/30 | 一旦の実装が完了し、北海道の保健所でテスト実施。概ね高評価を得る。今後に向けての調整中 |
-| 2021/01/30 | サーバのステージング用URLを作成。（APIの機能自体はまだ全ては終わっていない）           |
-| 2020/12/30 | ユースケース及びワイヤーフレームが8割方完成。開発に着手。リポジトリを3つに分ける       |
-| 2020/12/26 | 本リポジトリを作成                                                                     |
-| 2020/12/23 | 奥村先生とボランティアチームのミーティングを実施、ざっくりとしたシステム要件が固まる   |
-| 2020/12/14 | 奥村先生の呼びかけに応じ、調査を開始                                                   |
+| Date | Contents |
+| ----| -----| -----|
+| 2021/04/30 | First implementation has been completed and tests are conducted at a health center in Hokkaido. It generally receives high ratings. Under adjustments for the future |
+| 2021/01/30 | Create a URL for staging the server. (The API functions themselves are not finished yet) |
+| 2020/12/30 | 80% of the use case and wire frame are completed. Beginning development. Divide the repository into three |
+| 2020/12/26 | Create this repository |
+| 2020/12/23 | Volunteer team meeting with Okumura will be held, and system requirements will be roughly determined |
+| 2020/12/14 | In response to Professor Okumura's appeal, the investigation begins |
 
 
-## ライセンス
+## License
 
-GNU AGPL v3 です。
+It's GNU AGPL v3.
 
 ## CONTRIBUTORS
-
-[docs/CONTRIBUTORS.md](docs/CONTRIBUTORS.md)をご確認ください。
+Please check [docs/CONTRIBUTORS.md] (docs/CONTRIBUTORS.md).

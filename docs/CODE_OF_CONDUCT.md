@@ -1,39 +1,37 @@
 version 1.0, 2020/12/26
 
-# 我々はなぜここにいるのか
+# Why are we here?
 
-* 新型コロナウイルス患者の生命を守るため
-* 保健所や医療関係者、自治体担当者の負担をできるかぎり減らすため
+*To protect the lives of COVID-19 patients
+*To reduce the burden on health centers, medical personnel, and local government officials as much as possible
 
-# サイト構築にあたっての行動原則
+# Principles of Action when Building a Site
 
 ## User perspective
 
-* 自宅や宿泊先で療養中の患者にとって使いやすい、UX（ユーザエクスペリエンス）を大切にする。
-* 保健師を始め、関係者が現場で使いやすいようなシステムを作る
+*We value UX (user experience) that is easy to use for patients undergoing treatment at home or in the accommodation.
+*Creating a system that is easy for public health nurses and other relevant parties to use on-site
 
 ## Be agile
 
-* 小さくつくり、徐々に大きくする
-* 変わり続ける状況に対し、素早く対応しつづける
+*Make it small and gradually grow larger
+*Continue to respond quickly to changing circumstances
 
 ## Care privacy
 
-* 個人情報を持たない
-* セキュリティ面を気にかける
+*Do not have personal information
+*Attention about security
 
 ## Build with people
 
-* 思い込みを避け、現場の人たちとともに作る
-* 市民エンジニアの貢献を歓迎する
+*Avoid assumptions and create them together with people on the job site
+*Welcome contributions from citizen engineers
 
 ## Be open
 
-* オープンソース：ソースコードやサイト構築に関するノウハウは可能な限り公開し、他の自治体でも利用できるようにする
-* 人々の参加を奨励し、知恵や経験を広く共有する
-
+*Open source: Make sure to make source code and site construction know-how available to other local governments as much as possible.
+*Encourage people to participate and share wisdom and experience widely.
 ## No one left behind
 
-* 国籍や年齢、障害の有無にかかわらず、誰もが快適に利用できるサイトをできるかぎり目指す
-* ユニバーサルデザインに関するガイドラインに準拠する
-
+*We aim to create a site that anyone can use comfortably regardless of nationality, age, or presence or absence of disabilities.
+*Comply with universal design guidelines

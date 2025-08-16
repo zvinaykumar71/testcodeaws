@@ -1,14 +1,13 @@
-# 本システムが必要となる背景
+# The background to the need for this system
 
-現在、北海道での新型コロナウイルス患者の増加に伴い、自宅療養や宿泊療養を行う患者が増えております。
+Currently, with the increase in COVID-19 patients in Hokkaido, the number of patients undergoing home recuperation or accommodation treatment is increasing.
 
-参考：[2か月前の10倍近く 新型コロナ 自宅での療養者が急増(NHK)](https://www3.nhk.or.jp/news/html/20201223/k10012780161000.html)
+Reference: [Nearly 10 times the number of people treated at home, almost 2 months ago, COVID-19 (NHK)] (https://www3.nhk.or.jp/news/html/20201223/k10012780161000.html)
 
-> 一方、自宅や施設で療養中に容体が急変するケースも起きていて、今月には神奈川県の宿泊施設で療養していた50代の男性が、また広島県では自宅で入院を待っていた60代の男性がそれぞれ亡くなっています。
+> Meanwhile, there have been cases where their condition suddenly changes while he is being treated at home or institutions, and this month a man in his 50s who was recuperating at a lodging facility in Kanagawa Prefecture, and another man in his 60s who was waiting to be hospitalized at his home in Hiroshima Prefecture, have died.
 
-と上記事でもあるように、患者の状況をタイムリーに把握することが必要となっています。
-北海道では、自宅/宿泊療養者にはパルスオキシメーターを配布する予定ですので、そこから得られた酸素飽和度と脈拍、及び体温その他の症状を患者さんから登録してもらう仕組みを作ります。
+As mentioned in the above article, it is necessary to grasp the patient's situation in a timely manner.
+In Hokkaido, pulse oximeters will be distributed to home/hospital patients, so we will create a system in which patients will register the oxygen saturation, pulse, body temperature and other symptoms obtained from this.
 
-また、そこで得られた情報を、その患者が担当する保健所側で一覧で見れるモニタリングダッシュボードを開発します。
-
-仕様については、[システム仕様](SPECIFICATION.md)をご覧ください。
+We will also develop a monitoring dashboard where the information obtained there can be viewed in a list at the health center where the patient is in charge.
+For specifications, see [System Specifications] (SPECIFICATION.md).

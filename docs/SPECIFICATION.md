@@ -1,45 +1,43 @@
-# システム仕様
+# System Specifications
 
-![システム概要](images/system-overview.png)
+![System Overview](images/system-overview.png)
 
-赤字で囲った部分が本システムの対象範囲
+The area surrounded by red is the scope of this system
 
-背景情報については、[BACKGROUND.md](BACKGROUND.md)もご覧ください。
+For background information, please also see [BACKGROUND.md] (BACKGROUND.md).
 
-## 患者側システム
+## Patient System
 
-* Web もしくは アプリ にて、患者が必要な情報を入力してサーバに送信する
-* スマートフォンは、患者が自身のものを利用する
-* 何らかの方法で、保健所から渡された匿名IDをセットする必要がある（いたずらを防ぐためのパスワードも必要？）
-* 定期的に、パルスオキシメーターで取得した情報や体温、症状などの情報を入力する
-  * パルスオキシメーターでは、酸素飽和度及び脈拍が取得可能
-  * 症状についても入力する
-* リスクの高い患者については、Bluetooth 対応のパルスオキシメーターとスマートフォンを渡し、自動でデータを吸い上げることを検討する
+*The patient enters the necessary information online or via the app and sends it to the server.
+*Smartphones allow patients to use their own
+*In some way, you need to set the anonymous ID given to you by the health center (do you also need a password to prevent pranks)
+*Regularly enter information obtained with a pulse oximeter, body temperature, symptoms, etc.
+  *Pulse oximeters allow you to obtain oxygen saturation and pulse
+  *Enter the symptoms too
+*For high-risk patients, consider giving them a Bluetooth-enabled pulse oximeter and smartphone to automatically suck up data.
 
-![クライアント側のワイヤーフレーム](images/clinet-flow.png)
+![Client-side wireframe] (images/clinet-flow.png)
 
-最新のワイヤーフレームは以下のFigmaを確認のこと
+Check the Figma below for the latest wire frames
+[Wireframe](https://www.figma.com/file/29X7k8bKfFlWS6Md5BhrME/UI-Template-Copy?node-id=41%3A0)
+## Health Center System
 
-[ワイヤーフレーム](https://www.figma.com/file/29X7k8bKfFlWS6Md5BhrME/UI-Template-Copy?node-id=41%3A0)
-## 保健所側システム
+*You can see a list of the patients in charge at each health center
+  *It is thought that a function to issue anonymous IDs to patients is necessary (assuming that the patient is issued at the time of medical treatment)
+  *Allows patients to be given a nickname (assuming it is not personal information)
+*Scroll to view the number of patients as it could exceed 100 in one health center
+*Raise an alert when:
+  *Does the vital information fit within the specified range?
+  *Is the data out of reach?
+*Change the color of the text when the vital exceeds a certain threshold
+*I would like to display a graph of the temperature
 
-* 保健所ごとに、担当する患者の状態一覧が見れる
-  * 患者に対して、匿名のIDをっ発行する機能が必要と思われる(療養を申し渡したタイミングでの発行を想定)
-  * 患者の匿名IDに対して、ニックネームを付けられるようにする（個人情報ではない想定）
-* 患者の数は、1保健所100名を超える可能性があるため、スクロールして表示する
-* 以下のような場合にアラートを上げる
-  * バイタル情報が規定のレンジに収まっているか？
-  * データが途切れていないか？
-* バイタルが特定のしきい値を越えたら文字の色を変える
-* 体温については、グラフ表示をしたい
+![Server-side wireframe] (images/server-flow.png)
 
-![サーバ側のワイヤーフレーム](images/server-flow.png)
+Check the Figma below for the latest wire frames
+[Wireframe](https://www.figma.com/file/29X7k8bKfFlWS6Md5BhrME/%E9%81%A0%E9%9A%94%E7%99%82%E9%A4%8A%E8%80%85%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0?node-id=0%3A1)
 
-最新のワイヤーフレームは以下のFigmaを確認のこと
+## Reference
 
-[ワイヤーフレーム](https://www.figma.com/file/29X7k8bKfFlWS6Md5BhrME/%E9%81%A0%E9%9A%94%E7%99%82%E9%A4%8A%E8%80%85%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0?node-id=0%3A1)
-
-## 参考
-
-病院等で使うセントラルモニタのイメージ（この画面は患者が固定されているが、今回は1画面には収まらないのでスクロール表示を検討）
+Image of a central monitor used in hospitals, etc. (This screen has a fixed patient, but this time it cannot fit on one screen, so I consider scrolling it)
 ![Sample2](images/sample2.png)
