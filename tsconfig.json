@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "lib": ["es2019","dom"],
+    "lib": ["es2019", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedLocals": true,
@@ -10,9 +10,11 @@
     "strictNullChecks": true,
     "strictBindCallApply": false,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es2019",
     "resolveJsonModule": true,
-    "outDir": ".lib"
+    "outDir": ".lib",
+    "skipLibCheck": true,            // ✅ ignore missing type errors in node_modules
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["src/swagger", "src/gh-swagger-ui", "src/webpack", "test"]
+  "exclude": ["src/swagger", "src/gh-swagger-ui", "src/webpack", "test", "node_modules"]
 }
